@@ -1,6 +1,6 @@
-#include <ESPFlashCounter.h>
+/*#include <ESPFlashCounter.h>
 #include <ESPFlash.h>
-#include <ESPFlashString.h>
+#include <ESPFlashString.h>*/
 #include <ESP8266WiFi.h>
 #include <ESP8266mDNS.h>
 #include <WiFiUdp.h>
@@ -10,7 +10,7 @@
 #include <MinimumSerial.h>
 #include <BufferedPrint.h>
 #include <FreeStack.h>
-
+#include <ESPFlashString.h>
 
 #ifndef STASSID
 #define STASSID "Deco-Gabi"
@@ -132,16 +132,16 @@ int last_message_received;
 #define CONFIG_ESTADO_FILEPATH      "/estado"
 #define CONFIG_LOCAL_FILEPATH       "/local"
 
-ESPFlashString ConfigSSID(CONFIG_SSID_FILEPATH, CONFIG_SSID);
-ESPFlashString ConfigPASSW(CONFIG_PASSW_FILEPATH, CONFIG_PASSW);
-ESPFlashString ConfigBOTTOKEN(CONFIG_BOTTOKEN_FILEPATH, CONFIG_BOTTOKEN);
-ESPFlashString ConfigCHATID1(CONFIG_CHATID1_FILEPATH, CONFIG_CHATID1);
-ESPFlashString ConfigCHATID2(CONFIG_CHATID2_FILEPATH, CONFIG_CHATID2);
+ESPFlashString PROGMEM ConfigSSID(CONFIG_SSID_FILEPATH, CONFIG_SSID);
+ESPFlashString PROGMEM ConfigPASSW(CONFIG_PASSW_FILEPATH, CONFIG_PASSW);
+ESPFlashString PROGMEM ConfigBOTTOKEN(CONFIG_BOTTOKEN_FILEPATH, CONFIG_BOTTOKEN);
+ESPFlashString PROGMEM ConfigCHATID1(CONFIG_CHATID1_FILEPATH, CONFIG_CHATID1);
+ESPFlashString PROGMEM ConfigCHATID2(CONFIG_CHATID2_FILEPATH, CONFIG_CHATID2);
 
-ESPFlashString ConfigACENDER(CONFIG_ACENDER_FILEPATH, "");
-ESPFlashString ConfigAPAGAR(CONFIG_APAGAR_FILEPATH, "");
-ESPFlashString ConfigESTADO(CONFIG_ESTADO_FILEPATH, "");
-ESPFlashString ConfigLOCAL(CONFIG_LOCAL_FILEPATH, "");
+ESPFlashString PROGMEM ConfigACENDER(CONFIG_ACENDER_FILEPATH, "");
+ESPFlashString PROGMEM ConfigAPAGAR(CONFIG_APAGAR_FILEPATH, "");
+ESPFlashString PROGMEM ConfigESTADO(CONFIG_ESTADO_FILEPATH, "");
+ESPFlashString PROGMEM ConfigLOCAL(CONFIG_LOCAL_FILEPATH, "");
 
 bool request_serial_output = false;
 
